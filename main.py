@@ -2,7 +2,7 @@ import inspect
 
 
 def introspection_info(obj):
-    print({'type': type(obj), 'attributes': dir(obj)})
+    print({'type': type(obj), 'attributes': dir(obj)[0:63]})
     function_module = inspect.getmodule(introspection_info)
     print('module', type(function_module), function_module)
     print('methods', inspect.getmembers(introspection_info))
